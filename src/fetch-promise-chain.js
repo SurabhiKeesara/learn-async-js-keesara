@@ -3,9 +3,10 @@ const fetchPromise = fetch(
   );
   
   fetchPromise
+  // cleaner way of chaining promises
     .then((response) => response.json())
     .then((products) => {
-        products.forEach(product => {
+        products.forEach(product => { 
             console.log(product.name);
           });
     });

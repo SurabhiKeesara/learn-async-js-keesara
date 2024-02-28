@@ -13,7 +13,7 @@ function doStep1(init, callback) {
     callback(result);
   }
   
-  function doOperation() {
+  function doOperation() { // this is a lot ... super nested callbacks
     doStep1(0, (result1) => {
       doStep2(result1, (result2) => {
         doStep3(result2, (result3) => {
@@ -24,4 +24,14 @@ function doStep1(init, callback) {
   }
   
   doOperation();
+
+  // Promise API
+  /*
+  Promise - allows function to be completed async; says that x should execute
+    when the async part of a function is complete
+  examples:
+    .then(() => )
+    .catch()
+    .finally()
+  */
   

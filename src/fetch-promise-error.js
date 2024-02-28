@@ -14,7 +14,7 @@ const fetchPromise = fetch(
             console.log(product.name);
           });
         })
-    .catch((error) => {
+    .catch((error) => { // async error handler
         console.error(`Failed to get products: ${error}`);
     });
 
