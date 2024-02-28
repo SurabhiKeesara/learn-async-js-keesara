@@ -15,4 +15,9 @@ const fetchPromise1 = fetch(
     .catch((error) => {
         console.error(`Failed to fetch: ${error}`);
     });
+
+
+    // run concurrent promises, but only return once the first of all those promises resolves
+    // fails if they all fail
+    // use cases: need only one result
   
